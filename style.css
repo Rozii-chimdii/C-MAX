@@ -656,3 +656,24 @@
         transform: translateY(-2px);
     }
     /* 9. TABLET RES
+
+@media (max-width: 768px) {
+  header, nav, .hero, .container, main {
+    flex-direction: column !important;
+    width: 100% !important;
+    text-align: center;
+    height: auto !important;
+  }
+  nav a, header a {
+    display: block !important;
+    margin: 8px 0 !important;
+  }
+  .order-btn, button {
+    display: block !important;
+    width: 90% !important;
+    margin: 10px auto !important;
+    position: static !important;
+  }
+  h1 { font-size: 30px !important; }
+  img { width: 100% !important; height: auto !important; }
+}

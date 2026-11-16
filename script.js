@@ -1,42 +1,66 @@
-const SUPABASE_KEY = "sb_publishable_kB84en7Ux2N6gX47mfkN4w_-xbCZn11";
 const SUPABASE_URL = "https://afayenqpkpxpfrqcpmqz.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_kB84en7Ux2N6gX47mfkN4w_-xbCZn11";
 const MY_WHATSAPP = "2348036811151";
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("orderBtn").onclick = function() {
-        alert("Please select your items and upload your receipt to place an order.");
-        window.location.href = "#order.html";
 
-    }
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("orderForm");
+  if (!form) {
+    console.log("orderForm not found - check your HTML id");
+    return;
+  }
 
-const modal = document.getElementById("orderModal");
-const btn = document.querySelector("#orderBtn");
-const span = document.querySelector(".close");
-btn.onclick = () => modal.style.display = "block";
-span.onclick = () => modal.style.display = "none";
-window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
-
-// Calculate Total
-const checks = document.querySelectorAll('.items-list input');
-const totalEl = document.getElementById('totalPrice');
-checks.forEach(c => c.addEventListener('change', () => {
-    let total = 0;
-    checks.forEach(ch => { if (ch.checked) total += parseInt(ch.value); });
-    totalEl.textContent = "₦" + total.toLocaleString();
-}));
-
-// Submit
-document.getElementById("orderForm").addEventListener("submit", function(e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    if (document.getElementById("receipt").files.length == 0) { alert("Please upload receipt"); return; }
-    document.getElementById("finalTotal").textContent = totalEl.textContent;
-    this.style.display = "none";
-    document.getElementById("thankYou").style.display = "block";
-    setTimeout(() => {
-        modal.style.display = "none";
-        this.reset();
-        this.style.display = "block";
-        document.getElementById("thankYou").style.display = "none";
-        totalEl.textContent = "₦0";
-    }, 4000);
+
+    const btn = form.querySelector("button[type='submit']");
+    if (btn) btn.textContent = "Sending...";
+
+    const full_name = document.getElementById("fullName")?.value || document.getElementById("name")?.value || "";
+    const phone = document.getElementById("phone")?.value || "";
+    const address = document.getElementById("address")?.value || "";
+    const delivery_date = document.getElementById("deliveryDate")?.value || document.getElementById("date")?.value || "";
+    const message = document.getElementById("message")?.value || "";
+
+    // Get checked items
+    let checked = [];
+    document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
+      checked.push(c.value || c.nextElementSibling?.textContent || "Cake");
+    });
+    const items = checked.join(", ") || "1 Cake";
+    const total_price = "To be confirmed";
+
+    const orderData = { full_name, phone, address, delivery_date, items, total_price, message };
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/orders`, {
+        method: "POST",
+        headers: {
+          "apikey": SUPABASE_KEY,
+          "Authorization": `Bearer ${SUPABASE_KEY}`,
+          "Content-Type": "application/json",
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify(orderData)
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        alert("Supabase Error: " + errText);
+        if (btn) btn.textContent = "Submit Order";
+        return;
+      }
+
+      alert("Order sent! We will confirm on WhatsApp.");
+
+      const waText = `Hello C-MAX BAKERY! New Order:%0AName: ${full_name}%0APhone: ${phone}%0AAddress: ${address}%0ADate: ${delivery_date}%0AItems: ${items}%0AMessage: ${message}`;
+      window.open(`https://wa.me/${MY_WHATSAPP}?text=${waText}`, "_blank");
+
+      form.reset();
+      if (btn) btn.textContent = "Submit Order";
+
+    } catch (err) {
+      alert("Error: " + err.message);
+      if (btn) btn.textContent = "Submit Order";
+    }
+  });
 });

@@ -1,3 +1,6 @@
+const SUPABASE_KEY = "sb_publishable_kB84en7Ux2N6gX47mfkN4w_-xbCZn11";
+const SUPABASE_URL = "https://afayenqpkpxpfrqcpmqz.supabase.co/rest/v1/";
+const MY_WHATSAPP = "2348036811151";
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("orderBtn").onclick = function() {
         alert("Please select your items and upload your receipt to place an order.");

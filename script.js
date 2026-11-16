@@ -1,4 +1,4 @@
-const SUPABASE_URL = "https://afayenqpkxpfrqcpmqz.supabase.co";
+const SUPABASE_URL = "https://afayenqpkpxpfrqcpmqz.supabase.co/rest/v1/";
 const SUPABASE_KEY = "sb_publishable_kB84en7Ux2N6gX47mfkN4w_-xbCZn11";
 const MY_WHATSAPP = "2348036811151";
 
@@ -81,3 +81,4 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
       if (btn) btn.textContent = "Submit Order";
     }
   });
+});

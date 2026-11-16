@@ -29,7 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const items = checked.join(", ") || "1 Cake";
     const total_price = "To be confirmed";
 
-    const orderData = { full_name, phone, address, delivery_date, items, total_price, message };
+   let receipt_url = "";
+const receiptFile = document.getElementById("receipt")?.files[0];
+if (receiptFile) {
+  const fileName = Date.now() + "-" + receiptFile.name.replace(/\s+/g, "_");
+  const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/receipts/${fileName}`, {
+    method: "POST",
+    headers: {
+      "apikey": SUPABASE_KEY,
+      "Authorization": `Bearer ${SUPABASE_KEY}`,
+      "Content-Type": receiptFile.type
+    },
+    body: receiptFile
+  });
+  if (uploadRes.ok) {
+    receipt_url = `${SUPABASE_URL}/storage/v1/object/public/receipts/${fileName}`;
+  }
+}
+
+const orderData = { full_name, phone, address, delivery_date, items, total_price, message, receipt_url };
 
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/orders`, {

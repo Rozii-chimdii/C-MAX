@@ -81,4 +81,3 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
       if (btn) btn.textContent = "Submit Order";
     }
   });
-});

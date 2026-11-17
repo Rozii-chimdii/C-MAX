@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
       checked.push(c.value || c.nextElementSibling?.textContent || "Cake");
     });
     const items = checked.join(", ") || "1 Cake";
-    const total_price = "To be confirmed";
+
+    let total_price = 0;
+document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
+  total_price += Number(c.dataset.price || 0);
+});
 
    let receipt_url = "";
 const receiptFile = document.getElementById("receipt")?.files[0];

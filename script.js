@@ -21,20 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const delivery_date_raw = document.getElementById("date")?.value || document.getElementById("date")?.value || "";
     const delivery_date = delivery_date_raw ? delivery_date_raw : null;
     const message = document.getElementById("msg")?.value || "";
-
-    // Get checked items - NAME + PRICE together
+    
 let checked = [];
+let totalPrice = 0;
+
 document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
   const itemName = c.getAttribute("data-name") || c.dataset.name || c.nextElementSibling?.textContent || "Item";
-  const itemPrice = c.value || "";
-  checked.push(itemName + " - ₦" + itemPrice);
+  const itemPrice = parseFloat(c.value) || 0;
+
+  // Find the Qty box inside the same zobo-item
+  const parent = c.closest(".zobo-item") || c.closest("div") || c.parentElement;
+  const qtyInput = parent ? parent.querySelector('input[type="number"]') : null;
+  const qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+
+  const total = itemPrice * qty;
+  totalPrice += total;
+
+  checked.push(itemName + " x " + qty + " - ₦" + total);
 });
 const items = checked.join(", ") || "No item selected";
-    
-    let total_price = 0;
-document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
-  total_price += Number(c.dataset.price || 0);
-});
+
 
    let receipt_url = "";
 const receiptFile = document.getElementById("receipt")?.files[0];

@@ -60,7 +60,7 @@ if (receiptFile) {
   }
 }
 
-const orderData = { full_name, phone, address, delivery_date, items, total_price, message, receipt_url };
+const orderData = { full_name, phone, address, delivery_date, items, total_price:totalPrice, message, receipt_url };
 
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/orders`, {

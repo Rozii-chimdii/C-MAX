@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const address = document.getElementById("address")?.value || "";
     const delivery_date_raw = document.getElementById("date")?.value || document.getElementById("date")?.value || "";
     const delivery_date = delivery_date_raw ? delivery_date_raw : null;
-    const message = document.getElementById("message")?.value || "";
+    const message = document.getElementById("msg")?.value || "";
 
     // Get checked items - NAME + PRICE together
 let checked = [];

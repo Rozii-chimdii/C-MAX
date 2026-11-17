@@ -22,13 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const delivery_date = delivery_date_raw ? delivery_date_raw : null;
     const message = document.getElementById("message")?.value || "";
 
-    // Get checked items
-    let checked = [];
-    document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
-      checked.push(c.value || c.nextElementSibling?.textContent || "Cake");
-    });
-    const items = checked.join(", ") || "1 Cake";
-
+    // Get checked items - NAME + PRICE together
+let checked = [];
+document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
+  const itemName = c.getAttribute("data-name") || c.dataset.name || c.nextElementSibling?.textContent || "Item";
+  const itemPrice = c.value || "";
+  checked.push(itemName + " - ₦" + itemPrice);
+});
+const items = checked.join(", ") || "No item selected";
+    
     let total_price = 0;
 document.querySelectorAll("input[type='checkbox']:checked").forEach(c => {
   total_price += Number(c.dataset.price || 0);

@@ -73,7 +73,7 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
         return;
       }
 
-      alert("Order sent! We will confirm on WhatsApp.");
+      alert("Order sent! Thanks for patronizing c-max.");
 
       const waText = `Hello C-MAX BAKERY! New Order:%0AName: ${full_name}%0APhone: ${phone}%0AAddress: ${address}%0ADate: ${delivery_date}%0AItems: ${items}%0AMessage: ${message}`;
       window.open(`https://wa.me/${MY_WHATSAPP}?text=${waText}`, "_blank");

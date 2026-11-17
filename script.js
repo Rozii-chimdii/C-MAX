@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = form.querySelector("button[type='submit']");
     if (btn) btn.textContent = "Sending...";
 
-    const full_name = document.getElementById("fullName")?.value || document.getElementById("name")?.value || "";
-    const phone = document.getElementById("phone")?.value || "";
+    const full_name = document.getElementById("FullName")?.value || document.getElementById("name")?.value || "";
+    const phone = document.getElementById("PhoneNumber")?.value || "";
     const address = document.getElementById("address")?.value || "";
-    const delivery_date_raw = document.getElementById("deliveryDate")?.value || document.getElementById("date")?.value || "";
+    const delivery_date_raw = document.getElementById("DeliveryDate")?.value || document.getElementById("date")?.value || "";
     const delivery_date = delivery_date_raw ? delivery_date_raw : null;
     const message = document.getElementById("message")?.value || "";
 

@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const full_name = document.getElementById("fullName")?.value || document.getElementById("name")?.value || "";
     const phone = document.getElementById("phone")?.value || "";
     const address = document.getElementById("address")?.value || "";
-    const delivery_date = document.getElementById("deliveryDate")?.value || document.getElementById("date")?.value || "";
+    const delivery_date_raw = document.getElementById("deliveryDate")?.value || document.getElementById("date")?.value || "";
+    const delivery_date = delivery_date_raw ? delivery_date_raw : null;
     const message = document.getElementById("message")?.value || "";
 
     // Get checked items

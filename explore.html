@@ -4,60 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treat Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <title>Treats</title>
+
 </head>
 
 <body>
-    <!-- MAIN TREAT SECTION -->
-    <section class="items">
 
-        <!-- SECTION HEADING -->
-        <h1>TREAT SECTION</h1>
-        <p class="subtitle">
-            A curated collection of treats — photos & video
-        </p>
+    <section class="treat-showcase">
+        <div class="treat-showcase-heading">
+            <h1>TREAT SECTION</h1>
+            <p>
+                A curated collection of treats — photos & video
+            </p>
+        </div>
 
-        <!-- GALLERY CONTAINER -->
-        <div class="items-gallery">
 
-            <!-- PHOTO 1 -->
-            <div class="items-card photo-one">
-                <img src="cake.jpg" alt="Delicious dessert">
+        <div class="treat-showcase-gallery">
+            <div class="treat-showcase-card treat-showcase-photo--one">
+                <img src="cake.jpg" alt="Delicious cake">
                 <p>♧ PHOTO 1</p>
             </div>
 
-            <!-- VIDEO CARD -->
-<div class="items-card video-card">
+            <div class="treat-showcase-card treat-showcase-card--video">
+                <video autoplay muted loop playsinline controls="auto">
+                    <source src="set.mp4" type="video/mp4">
+                Your browser does not support video playback.
+                </video>
+                <p>The Making of our Zobo Drink</p>
+            </div>
 
-    <video controls loop playsinline preload="metadata">
-        <source src="set.MP4" type="video/mp4">
-        Your browser does not support video playback.
-    </video>
 
-</div>
-
-            <!-- PHOTO 2 -->
-            <div class="items-card photo-two">
-                <img src="chops.jpg" alt="Freshly baked pastry">
+            <div class="treat-showcase-card treat-showcase-photo--two">
+                <img src="chops.jpg" alt="Freshly prepared small chops">
                 <p>♧ PHOTO 2</p>
             </div>
 
-            <!-- PHOTO 3 -->
-            <div class="items-card photo-three">
-                <img src="drink.jpg" alt="Creamy dessert">
+
+
+            <div class="treat-showcase-card treat-showcase-photo--three">
+                <img src="drink.jpg" alt="Delicious treat">
                 <p>PHOTO 3</p>
             </div>
 
-            <!-- PHOTO 4 -->
-            <div class="items-card photo-four">
-                <img src="chin.jpg" alt="Chocolate pastry">
+
+            <div class="treat-showcase-card treat-showcase-photo--four">
+                <img src="chin.jpg" alt="Fresh chin chin">
                 <p>PHOTO 4</p>
             </div>
-
         </div>
-
     </section>
+
 </body>
 
 </html>

@@ -737,6 +737,7 @@
         object-fit: cover;
         border-radius: 16px;
         display: block;
+        filter: brightness(85%);
     }
     
     .items-card p {
@@ -749,7 +750,6 @@
 
     
     .items-card {
-        background: #252525;
         min-height: 160px;
         display: flex;
         flex-direction: column;
@@ -936,9 +936,11 @@ img, video {
     } 
     .items h1{
         font-size: 21px; 
+        margin-right:10%  
     }
    .subtitle {
         font-size: 10px; 
+        margin-right:10%
     }
    
    .items-gallery {

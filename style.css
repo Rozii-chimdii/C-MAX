@@ -736,7 +736,7 @@
     
     .items-card img {
         width: 100%;
-        height: 115px;
+        height: 100%;
         object-fit: cover;
         border-radius: 16px;
         display: block;
@@ -944,5 +944,14 @@ img, video {
   .photo-one, .photo-two, .video-card, .photo-three, .photo-four {
     grid-column: 1;
     grid-row: auto;
+  }
+}
+@media (max-width: 768px) {
+  .items-card {
+    min-height: 260px;
+    height: 260px;
+  }
+  .items-card video {
+    object-fit: cover;
   }
 }

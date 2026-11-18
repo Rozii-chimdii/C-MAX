@@ -767,7 +767,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 8px;
-        filter: brightness(85%);
+       
     }
 
 /* ===== FIX FOR ALL PHONES - PASTE AT VERY BOTTOM ===== */
@@ -906,22 +906,7 @@ img, video {
   }
 }
 
-/* Very small phones - Tecno / iPhone SE */
-@media (max-width: 400px) {
-  .cards > div {
-    width: 100%;
-  }
-  .offer h1 {
-    font-size: 26px;
-  }
-  .items-gallery {
-    grid-template-columns: repeat(2, 1fr 1fr);
-  }
-  .photo-one, .photo-two, .video-card, .photo-three, .photo-four {
-    grid-column: 1;
-    grid-row: 2;
-  }
-}
+
 @media screen and (max-width: 600px) {
     .treat-section {
         padding: 25px 15px;

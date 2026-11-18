@@ -818,28 +818,7 @@ img, video {
 }
 
 
-@media screen and (max-width: 600px) {
-    .treat-section {
-        padding: 25px 15px;
-        min-height: auto;
-    }
 
-    .treat-section h1 {
-        font-size: 25px;
-    }
-
-    .treat-gallery {
-        gap: 10px;
-    }
-
-    .gallery-card img {
-        height: 85px;
-    }
-
-    .video-card {
-        min-height: 125px;
-    }
-}
 
 /* VIDEO CONTAINER */
 .items-card.video-card {

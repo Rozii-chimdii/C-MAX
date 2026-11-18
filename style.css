@@ -70,7 +70,7 @@
     }
     
     .hero {
-        background-image: url('images/hero.jpg');
+        background-image: url('hero.jpg');
         background-size: cover;
         background-position: center;
         color: #1f1f11;
@@ -692,7 +692,7 @@
     
     .items-gallery {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns:1fr 1fr;
         gap: 16px;
         align-items: center;
         max-width: 700px;
@@ -902,26 +902,7 @@ img, video {
     padding: 15px 12px;
   }
 
-  /* 7. TREAT SECTION - VIDEO IN MIDDLE */
-    .items-section {
-        width: 100%;
-        padding: 25px 15px;
-    }
-
-    .items h1,
-    .subtitle {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .items-gallery {
-        gap: 10px;
-    }
-
-    .items-card img {
-        height: 95px;
-    }
-
+  
   /* 8. FOOTER */
   footer {
     flex-direction: column;

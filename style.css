@@ -985,69 +985,8 @@
         max-width: 100%;
     }
 
-  /* ORDER FORM - CENTER IT, STOP IT GOING ONE SIDE */
-  .modal-content {
-    margin: 0 auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 15px 12px !important;
-    box-sizing: border-box;
-  }
-
-  .modal-content h2 {
-    font-size: 22px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .modal-content img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block;
-  }
-
-  /* Personal Details - label on top, input below */
-  .details div {
-    grid-template-columns: 1fr !important;
-    gap: 8px;
-  }
-
-  .details label,
-  .items-list label {
-    font-size: 14px;
-  }
-
-  .details input,
-  .items-list textarea,
-  .acco input {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-
-  /* Cake / Zobo - 1 per row so it doesn't cut off */
-  .single, .double, .two, .five, .one, .zobo {
-    grid-template-columns: 1fr !important;
-  }
-
-  .zobo-item {
-    width: 100%;
-  }
-
-  .box input {
-    width: 100%;
-  }
-
-  .acco {
-    padding: 15px 12px;
-  }
-}
-    /* TREAT GALLERY */
-    .items-section {
-        width: 100%;
-        padding: 25px 15px;
-    }
+ 
+    
 
     .items h1,
     .subtitle {

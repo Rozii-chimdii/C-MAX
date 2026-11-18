@@ -720,7 +720,7 @@
     
     .photo-two {
         grid-column: 4;
-        grid-row: 1;
+        grid-row: 2;
     }
     
     .photo-three {
@@ -939,11 +939,11 @@ img, video {
     font-size: 26px;
   }
   .items-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr 1fr);
   }
   .photo-one, .photo-two, .video-card, .photo-three, .photo-four {
     grid-column: 1;
-    grid-row: auto;
+    grid-row: 2;
   }
 }
 @media (max-width: 768px) {

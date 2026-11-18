@@ -987,15 +987,14 @@
 
     /* ORDER MODAL */
     .modal-content {
-        margin-left:0;
-        max-width: 100px;
-        padding: 15px 12px;
-    }
-
-    .modal-content img {
-        margin-left: 0;
-    }
-.details div {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 15px 12px;
+  }
+  .modal-content img {
+    margin-left: 0;
+  }
+  .details div {
     grid-template-columns: 1fr;
   }
   .single, .double, .two, .five, .one, .zobo {
@@ -1003,6 +1002,7 @@
   }
   .acco {
     padding: 15px 12px;
+  } 
   }
     /* TREAT GALLERY */
     .items-section {

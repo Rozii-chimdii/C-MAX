@@ -860,3 +860,164 @@
     text-align: center;
   }
 }
+
+/* =================================
+   TABLET RESPONSIVENESS
+   Screens below 768px
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* GENERAL */
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    a {
+        margin-left: 0;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    .offer h1 {
+        font-size: 36px;
+    }
+
+    .offer p {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content>div img {
+        width: 100%;
+        max-width: 400px;
+        height: 250px;
+        margin: 0;
+    }
+
+    /* OUR TREATS */
+    .our-treats h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cards>div {
+        flex: 1 1 200px;
+        max-width: 280px;
+    }
+
+    /* DECORATION SECTION */
+    .decor {
+        padding: 15px;
+    }
+
+    .decor h4 {
+        font-size: 32px;
+    }
+
+    .treats {
+        flex-direction: column;
+    }
+
+    .big,
+    .grid {
+        width: 100%;
+    }
+
+    .big img {
+        height: 300px;
+    }
+
+    .grid {
+        grid-template-rows: repeat(2, 150px);
+    }
+
+    /* CONTACT SECTION */
+    .down {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .style-form {
+        max-width: 100%;
+    }
+
+    /* ORDER MODAL */
+    .modal-content {
+        width: 95%;
+        max-width: 620px;
+        margin: 20px auto;
+    }
+
+    .modal-content img {
+        display: block;
+        margin: auto;
+    }
+
+    /* TREAT GALLERY */
+    .items-section {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .items h1,
+    .subtitle {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .items-gallery {
+        gap: 10px;
+    }
+
+    .items-card img {
+        height: 95px;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}

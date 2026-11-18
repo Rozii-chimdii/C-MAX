@@ -788,23 +788,25 @@ img, video {
 
 @media (max-width: 768px) {
   /* 1. NAVBAR - stack it */
-  .navbar {
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  a {
-    margin-left: 0 !important;
-    padding: 5px;
-    font-size: 13px;
-  }
-  .logo span {
-    top: 0;
-    font-size: 1rem;
-  }
+  /* NAVBAR */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    a {
+        margin-left: 0;
+        padding: 5px;
+        font-size: 14px;
+    }
 
   /* 2. HERO - stack text on top, image below */
   .hero {

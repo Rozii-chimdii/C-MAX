@@ -946,12 +946,29 @@ img, video {
     grid-row: 2;
   }
 }
-@media (max-width: 768px) {
-  .items-card {
-    min-height: 260px;
-    height: 260px;
-  }
+@media (max-width: 380px) {
+  .items-section {
+        border-radius: 18px;
+        padding: 22px 10px;
+    } 
+    .items h1{
+        font-size: 21px; 
+    }
+   .subtitle {
+        font-size: 10px; 
+    }
+   
+   .items-gallery {
+        gap: 7px;
+    }
+   
+   .items-card img {
+        height: 70px;
+       border-radius: 10px;
+    }
   .items-card video {
-    object-fit: cover;
+    width:35px;
+     height:35px;
+     
   }
 }

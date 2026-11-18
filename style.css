@@ -987,16 +987,23 @@
 
     /* ORDER MODAL */
     .modal-content {
-        width: 95%;
-        max-width: 620px;
-        margin: 20px auto;
+        margin-left:0;
+        max-width: 100px;
+        padding: 15px 12px;
     }
 
     .modal-content img {
-        display: block;
-        margin: auto;
+        margin-left: 0;
     }
-
+.details div {
+    grid-template-columns: 1fr;
+  }
+  .single, .double, .two, .five, .one, .zobo {
+    grid-template-columns: 1fr;
+  }
+  .acco {
+    padding: 15px 12px;
+  }
     /* TREAT GALLERY */
     .items-section {
         width: 100%;

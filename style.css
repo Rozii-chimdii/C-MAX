@@ -2,8 +2,11 @@
         margin: 0;
     }
     
-    html {
+    html,
+    body {
         scroll-behavior: smooth;
+        width: 100%;
+        margin: 0;
     }
     
     .navbar {
@@ -67,7 +70,7 @@
     }
     
     .hero {
-        background-image: url('hero.jpg');
+        background-image: url('images/hero.jpg');
         background-size: cover;
         background-position: center;
         color: #1f1f11;
@@ -116,6 +119,7 @@
     }
     
     .btn1:hover {
+        text-decoration: none;
         background-color: white;
         color: #e78a2f;
         ;
@@ -655,42 +659,118 @@
         border-color: #B18A45;
         transform: translateY(-2px);
     }
-    /* 9. TABLET RES
-
-@media (max-width: 768px) {
-  header, nav, .hero, .container, main {
-    flex-direction: column !important;
-    width: 100% !important;
-    text-align: center;
-    height: auto !important;
-  }
-  nav a, header a {
-    display: block !important;
-    margin: 8px 0 !important;
-  }
-  .order-btn, button {
-    display: block !important;
-    width: 90% !important;
-    margin: 10px auto !important;
-    position: static !important;
-  }
-  h1 { font-size: 30px !important; }
-  img { width: 100% !important; height: auto !important; }
-}
-
-* {
-  box-sizing: border-box !important;
-}
-
-html, body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-img, video {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
+    /* MAIN TREAT SECTION */
+    
+    .items-section {
+        background-color: #f5f1ef;
+        width: 100%;
+        max-width: 850px;
+        min-height: 480px;
+        padding: 35px 40px;
+        border-radius: 24px;
+        text-align: center;
+    }
+    /* SECTION HEADING */
+    
+    .items h1 {
+        margin-left: 40%;
+        font-size: 32px;
+        font-weight: 700;
+        color: #444;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        margin-left: 40%;
+        font-size: 12px;
+        color: #888;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+    /* GALLERY GRID */
+    
+    .items-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    /* PHOTO AND VIDEO CARDS */
+    
+    .items-card {
+        border: 1px solid #d8d2cf;
+        border-radius: 20px;
+        padding: 6px;
+        overflow: hidden;
+    }
+    /* POSITIONING THE CARDS */
+    
+    .photo-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .video-card {
+        grid-column: 2 / 4;
+        grid-row: 1;
+    }
+    
+    .photo-two {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    
+    .photo-three {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .photo-four {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    /* PHOTO IMAGES */
+    
+    .items-card img {
+        width: 100%;
+        height: 115px;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+    }
+    /* PHOTO CAPTIONS */
+    
+    .items-card p {
+        font-size: 11px;
+        color: 888;
+        padding: 9px 0 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    /* VIDEO CARD */
+    
+    .items-card {
+        background: #252525;
+        min-height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 1px solid #aaa;
+        border-radius: 12px;
+        position: relative;
+    }
+    /* VIDEO IMAGE */
+    
+    .items-card img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        filter: brightness(85%);
+    }

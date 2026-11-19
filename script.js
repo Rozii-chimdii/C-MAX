@@ -96,23 +96,33 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
   });
 });
 
-document.getElementById('decorForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const name = document.getElementById('decorName').value;
-  const phone = document.getElementById('decorPhone').value;
-  const message = document.getElementById('decorMessage').value;
+document.addEventListener("DOMContentLoaded", () => {
+  const decorForm = document.getElementById("decorForm");
+  if (!decorForm) return;
 
-  const { error } = await supabase
-    .from('room_decor_bookings')
-    .insert([{ name: name, phone: phone, message: message }]);
+  decorForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = decorForm.querySelector("button");
+    btn.textContent = "Sending...";
+    btn.disabled = true;
 
-   const btn = form.querySelector("button[type='send message']");
-    if (btn) btn.textContent = "Sending...";
-  
-  if (error) {
-    alert('Error: ' + error.message);
-  } else {
-    alert('Booking received! We will call you.');
-    document.getElementById('decorForm').reset();
-  }
+    const name = document.getElementById("decorName").value;
+    const phone = document.getElementById("decorPhone").value;
+    const message = document.getElementById("decorMessage").value;
+
+    const { error } = await supabaseClient
+      .from("room_decor_bookings")
+      .insert([{ name: name, phone: phone, message: message }]);
+
+    if (error) {
+      alert("Error: " + error.message);
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    } else {
+      alert("Booking received! We will call you.");
+      decorForm.reset();
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    }
+  });
 });

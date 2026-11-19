@@ -106,6 +106,9 @@ document.getElementById('decorForm').addEventListener('submit', async function(e
     .from('room_decor_bookings')
     .insert([{ name: name, phone: phone, message: message }]);
 
+   const btn = form.querySelector("button[type='message']");
+    if (btn) btn.textContent = "Sending...";
+  
   if (error) {
     alert('Error: ' + error.message);
   } else {

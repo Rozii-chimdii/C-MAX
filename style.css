@@ -1053,7 +1053,7 @@ img, video {
   }
 }
 
-body {
+.treat-showcase body {
     display: flex;
     justify-content: center;
     align-items: center;

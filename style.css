@@ -759,7 +759,7 @@
         background-color: #252525;
         border: 1px solid #aaa;
         border-radius: 12px;
-        padding: 6px;
+        padding: 0;
         min-width: 0;
         min-height: 160px;
         position: relative;
@@ -1029,69 +1029,7 @@ img, video {
   }
   .acco {
     padding: 15px 12px;
-  } .acco {
-        margin-top: 20px;
-        padding: 20px;
-        background: #FAF5F0;
-        border: 1px solid #E6D3B5;
-        border-left: 4px solid #C5A15B;
-        border-radius: 12px;
-    }
-    
-    .acco h4 {
-        font-size: 17px;
-        color: #65444D;
-        margin-bottom: 10px;
-    }
-    
-    .acco p {
-        background: #FFFFFF;
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #EEE2D9;
-        font-size: 13px;
-        line-height: 2;
-        margin-bottom: 15px;
-    }
-    
-    .acco b {
-        color: #A47B37;
-    }
-    /* Receipt upload */
-    
-    .acco label {
-        display: block;
-        font-size: 13px;
-        font-weight: 600;
-        margin-bottom: 9px;
-    }
-    
-    .acco input[type="file"] {
-        width: 100%;
-        padding: 11px;
-        border: 1px dashed #C5A15B;
-        background: #FFFFFF;
-        border-radius: 8px;
-        font-size: 12px;
-    }
-    /* 8. SUBMIT BUTTON */
-    
-    .submit-btn {
-        width: 100%;
-        margin-top: 15px;
-        padding: 15px;
-        border: 1px solid #C5A15B;
-        border-radius: 9px;
-        background: #65444D;
-        color: #FFFFFF;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    
-
+ 
   /* 8. FOOTER */
   footer {
     flex-direction: column;

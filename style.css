@@ -124,24 +124,7 @@
         color: #e78a2f;
         ;
     }
-    
-    .btn2 {
-        background-color: #fffbf5;
-        color: #4b2e26;
-        border: 2px solid #d4a854;
-        padding: 10px 25px;
-        border-radius: 20px;
-        border: none;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    
-    .btn2:hover {
-        background-color: white;
-        color: #e78a2f;
-        ;
-    }
+
     
     .hero-content>div img {
         width: 350px;
@@ -921,53 +904,203 @@ img, video {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
-  /* 1. NAVBAR - stack it */
-  .navbar {
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  a {
-    margin-left: 0 !important;
-    padding: 5px;
-    font-size: 13px;
-  }
-  .logo span {
-    font-size: 1rem;
-  }
+/* TABLET RESPONSIVENESS */
+@media screen and (max-width: 768px) {
 
-  /* 2. HERO - stack text on top, image below */
-  .hero {
-    padding: 30px 15px;
-    gap: 20px;
-  }
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .offer {
-    width: 100%;
-  }
-  .offer h1 {
-    font-size: 32px;
-  }
-  .offer p {
-    font-size: 15px;
-  }
-  .hero-content > div img {
-    width: 100%;
-    height: 220px;
-    margin-right: 0;
-  }
-  .btn1, .btn2 {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+    .navbar {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
+    .logo img {
+        width: 42px;
+    }
+
+    .logo span {
+        font-size: 1rem;
+        top: -12px;
+    }
+
+    .nav-links {
+        gap: 5px;
+        align-items: center;
+    }
+
+    a {
+        margin-left: 10px;
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 45px 4%;
+        gap: 20px;
+    }
+
+    .hero-content {
+        gap: 20px;
+    }
+
+    .offer {
+        width: 55%;
+    }
+
+    .offer h1 {
+        font-size: 35px;
+    }
+
+    .offer p {
+        font-size: 15px;
+    }
+
+    .hero-content > div img {
+        width: 280px;
+        height: 220px;
+        margin-right: 0;
+    }
+
+    .btn1 {
+        font-size: 15px;
+        padding: 9px 20px;
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo span {
+        font-size: 16px;
+        top: -10px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+    }
+
+    a {
+        margin-left: 0;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .bnt {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+        padding: 35px 15px;
+        gap: 20px;
+        background-position: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    .offer h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .offer p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .btn1 {
+        font-size: 14px;
+        padding: 10px 22px;
+    }
+
+    .hero-content > div img {
+        width: 100%;
+        max-width: 350px;
+        height: 220px;
+        margin-right: 0;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+@media screen and (max-width: 350px) {
+
+    .navbar {
+        padding: 8px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    a {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 35px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 25px 12px;
+    }
+
+    .offer h1 {
+        font-size: 25px;
+    }
+
+    .offer p {
+        font-size: 13px;
+    }
+
+    .hero-content > div img {
+        height: 190px;
+    }
+
+    .btn1 {
+        font-size: 13px;
+        padding: 9px 18px;
+    }
+}
   /* 3. TREATS / CARDS - 2 per row */
   .our-treats h2, .decor h4 {
     font-size: 28px;

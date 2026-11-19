@@ -98,7 +98,10 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
 
 document.addEventListener("DOMContentLoaded", () => {
   const decorForm = document.getElementById("decorForm");
-  if (!decorForm) return;
+  if (!decorForm) {
+    alert("Form not found - check id='decorForm'");
+    return;
+  }
 
   decorForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -110,19 +113,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("decorPhone").value;
     const message = document.getElementById("decorMessage").value;
 
-    const { error } = await supabaseClient
-      .from("room_decor_bookings")
-      .insert([{ name: name, phone: phone, message: message }]);
+    console.log("Trying to send:", name, phone, message);
+    console.log("URL:", SUPABASE_URL);
 
-    if (error) {
-      alert("Error: " + error.message);
-      btn.textContent = "Send Message";
-      btn.disabled = false;
-    } else {
+    try {
+      const res = await fetch(SUPABASE_URL + "/rest/v1/room_decor_bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": SUPABASE_KEY,
+          "Authorization": "Bearer " + SUPABASE_KEY,
+          "Prefer": "return=representation"
+        },
+        body: JSON.stringify([{ name: name, phone: phone, message: message }])
+      });
+
+      const result = await res.text();
+      console.log("Supabase answered:", res.status, result);
+
+      if (!res.ok) throw new Error("Supabase says: " + result);
+
       alert("Booking received! We will call you.");
       decorForm.reset();
-      btn.textContent = "Send Message";
-      btn.disabled = false;
+    } catch (err) {
+      console.log("FAILED:", err);
+      alert("Error: " + err.message);
     }
+
+    btn.textContent = "Send Message";
+    btn.disabled = false;
   });
 });

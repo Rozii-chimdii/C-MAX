@@ -95,3 +95,22 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
     }
   });
 });
+
+document.getElementById('decorForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('decorName').value;
+  const phone = document.getElementById('decorPhone').value;
+  const message = document.getElementById('decorMessage').value;
+
+  const { error } = await supabase
+    .from('room_decor_bookings')
+    .insert([{ name: name, phone: phone, message: message }]);
+
+  if (error) {
+    alert('Error: ' + error.message);
+  } else {
+    alert('Booking received! We will call you.');
+    document.getElementById('decorForm').reset();
+  }
+});

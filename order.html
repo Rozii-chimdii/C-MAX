@@ -115,7 +115,7 @@
 
 
             <div class="acco">
-                <h4>Total=₦</h4><br><b>PAY TO:</b>
+                <h4>Total: <span id="total-amount">₦0</span></h4><br><b>PAY TO:</b>
                 <p>
                     <b>Bank:</b>Moniepoint <br>
                     <b>Account Name:</b>C-max Bakery <br>
@@ -132,5 +132,22 @@
     </section>
     <script src="script.js"></script>
 </body>
+<script>
+  const checks = document.querySelectorAll('.treat-check');
+  const totalEl = document.getElementById('total-amount');
 
+  function updateTotal() {
+    let total = 0;
+    checks.forEach(function(box) {
+      if (box.checked) {
+        total += Number(box.dataset.price);
+      }
+    });
+    totalEl.textContent = '₦' + total.toLocaleString();
+  }
+
+  checks.forEach(function(box) {
+    box.addEventListener('change', updateTotal);
+  });
+</script>
 </html>

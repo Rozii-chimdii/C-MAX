@@ -864,7 +864,7 @@
             grid-column: 1 / 3;
             grid-row: 2;
             width: 100%;
-            min-height: 180px;
+            min-height: 160px;
             padding: 6px;
             overflow:hidden;
         }
@@ -872,7 +872,7 @@
         .treat-showcase-card--video video {
            display:block;
             width: 100%;
-            height: 165px;
+            height: 145px;
             object-fit: cover;
         }
     }

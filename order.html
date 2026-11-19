@@ -109,7 +109,7 @@
                     <label><input type="checkbox" value="45,000" data-name="1,000 notes for 30,000">1,000 notes for 30,000- ₦45,000 </label>
                     <label><input type="checkbox" value="75,000" data-name="1,000 notes for 50,000">1,000 notes for 50,000- ₦75,000</label>
                     <label><input type="checkbox" value="145,000" data-name="1,000 notes for 50,000">1,000 notes for 50,000- ₦145,000</label>
-                    <label><input type="checkbox" value="210,000" data-name="1,000 notes for 200,000">1,000 notes for 200,000- ₦290,000</label>
+                    <label><input type="checkbox" value="290,000" data-name="1,000 notes for 200,000">1,000 notes for 200,000- ₦290,000</label>
                 </div>
             </div>
 
@@ -140,7 +140,8 @@
     let total = 0;
     checks.forEach(function(box) {
       if (box.checked) {
-        total += Number(box.dataset.price);
+        let price = box.value.replace(/[^0-9]/g, "");
+        total += Number(price);
       }
     });
     totalEl.textContent = '₦' + total.toLocaleString();

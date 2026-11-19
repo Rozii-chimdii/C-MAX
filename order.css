@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+.logo span {
+    display: inline-block;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: goldenrod;
+    top: -15px;
+}
+
+.modal-content {
+    background: #fff;
+    width: 100%;
+    max-width: 620px;
+    margin-left: 25%;
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+    border-top: 6px solid #B45309;
+}
+
+.modal-content img {
+    width: 50px;
+    height: auto;
+    margin-left: 45%;
+}
+
+.modal-content span {
+    font-weight: 800;
+    color: #7C2D12;
+    font-size: 18px
+}
+
+.modal-content h2 {
+    color: #7C2D12;
+    text-align: center;
+    margin: 8px 0 12px
+}
+
+
+/* Personal Details - 2 columns to save space */
+
+.details h3,
+.items-list h4,
+.acco h4 {
+    color: #B45309;
+    font-size: 20px;
+    margin: 10px 0 4px
+}
+
+.details p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px
+}
+
+.details div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 10px;
+}
+
+.details label,
+.items-list label,
+.acco label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+    margin-top: 6px;
+    display: block
+}
+
+.details input,
+.items-list textarea,
+.acco input {
+    width: 100%;
+    padding: 5px 7px;
+    border: 1.5px solid #FDBA74;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13px;
+    background: #FFFBEB
+}
+
+.details input:focus,
+.items-list textarea:focus {
+    border-color: #B45309;
+    background: #fff
+}
+
+
+/* Cake / Zobo / Bouquet - Pills in grid */
+
+.items-list,
+.zobo,
+.bouq {
+    margin-top: 6px
+}
+
+.items-list h4 {
+    border-bottom: 1px dashed #FDBA74;
+    padding-bottom: 4px
+}
+
+.single p,
+.double p,
+.bouq p {
+    font-weight: 800;
+    font-size: 23px;
+    margin: 8px 0 2px;
+    grid-column: 1/-1;
+}
+
+.single,
+.double,
+.two,
+.five,
+.one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 6px;
+    align-items: stretch;
+}
+
+.items-list label,
+.two label,
+.five label,
+.one label {
+    background: #FFF7ED;
+    border: 1px solid #FDBA74;
+    padding: 7px 8px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    align-items: center
+}
+
+.items-list label:hover {
+    border-color: #B45309;
+    background: #FFEDD5
+}
+
+.items-list input[type="checkbox"],
+.zobo input[type="checkbox"] {
+    accent-color: #B45309;
+    width: 15px;
+    height: 15px
+}
+
+
+/* Zobo qty box */
+
+.zobo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10%;
+}
+
+.zobo-item {
+    background: #FFF7ED;
+    border: 1px solid #FDBA74;
+    border-radius: 10px;
+    padding: 8px
+}
+
+.zobo-item label {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.box {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 5px
+}
+
+.box span {
+    font-size: 11px
+}
+
+.box input {
+    width: 100px;
+    padding: 6px;
+    border-radius: 7px;
+    border: 1px solid #FDBA74
+}
+
+.acco {
+    margin-top: 20px;
+    padding: 20px;
+    background: #FAF5F0;
+    border: 1px solid #E6D3B5;
+    border-left: 4px solid #C5A15B;
+    border-radius: 12px;
+}
+
+.acco h4 {
+    font-size: 17px;
+    color: #65444D;
+    margin-bottom: 10px;
+}
+
+.acco p {
+    background: #FFFFFF;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #EEE2D9;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.acco b {
+    color: #A47B37;
+}
+
+
+/* Receipt upload */
+
+.acco label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.acco input[type="file"] {
+    width: 100%;
+    padding: 11px;
+    border: 1px dashed #C5A15B;
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+
+/* 8. SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #C5A15B;
+    border-radius: 9px;
+    background: #65444D;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #B18A45;
+    border-color: #B18A45;
+    transform: translateY(-2px);
+}

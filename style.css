@@ -1052,3 +1052,32 @@ img, video {
     grid-row: auto;
   }
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    background-color: #000;
+}
+
+/* MAIN CONTAINER */
+.treat-showcase {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* PREVENT GRID OVERFLOW */
+.treat-showcase__gallery {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-width: 0;
+}
+
+.treat-showcase__card {
+    min-width: 0;
+}

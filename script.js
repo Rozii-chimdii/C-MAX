@@ -106,7 +106,7 @@ document.getElementById('decorForm').addEventListener('submit', async function(e
     .from('room_decor_bookings')
     .insert([{ name: name, phone: phone, message: message }]);
 
-   const btn = form.querySelector("button[type='message']");
+   const btn = form.querySelector("button[type='send message']");
     if (btn) btn.textContent = "Sending...";
   
   if (error) {

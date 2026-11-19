@@ -866,15 +866,14 @@
             width: 100%;
             height:auto;
             min-height: 0;
-            aspect-ratio:auto;
-            padding: 0;
+            padding: 0 !important;
             overflow:hidden;
         }
         /* VIDEO SIZE */
         .treat-showcase-card--video video {
            display:block;
             width: 100%;
-            height: auto;
+            height: 105px;
             object-fit: cover;
         }
     }
@@ -900,10 +899,11 @@
             height: 85px;
         }
         .treat-showcase-card--video {
-            min-height: 0;
+            height: 0 !important;
         }
         .treat-showcase-card--video video {
             height: 125px;
+            object-fit: cover;
         }
     }
 

@@ -1025,9 +1025,7 @@ img, video {
   .single, .double, .two, .five, .one, .zobo {
     grid-template-columns: 1fr;
   }
-  .acco {
-    padding: 15px 12px !important;
- 
+  
   /* 8. FOOTER */
   footer {
     flex-direction: column;

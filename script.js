@@ -99,8 +99,8 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
 document.addEventListener("DOMContentLoaded", () => {
   const decorForm = document.getElementById("decorForm");
   if (!decorForm) {
-    alert("Form not found - check id='decorForm'");
-    return;
+    const decorForm = document.getElementById('decorForm');
+if (!decorForm) return;f
   }
 
   decorForm.addEventListener("submit", async (e) => {

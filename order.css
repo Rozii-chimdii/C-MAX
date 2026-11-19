@@ -274,59 +274,285 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-  .modal-content {
-    width: calc(100% - 20px) !important;
-    max-width: 100% !important;
-    margin: 10px auto !important;
-    padding: 14px 12px !important;
-  }
+/* TABLET RESPONSIVENESS */
+@media screen and (max-width: 768px) {
 
-  .modal-content img {
-    margin-left: 0 !important;
-    display: block;
-    margin: 0 auto !important;
-  }
+    .modal-content {
+        width: 90%;
+        max-width: 620px;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
 
-  .logo span {
-    top: 0 !important;
-  }
+    .modal-content img {
+        width: 45px;
+        margin: 0 auto;
+        display: block;
+    }
 
-  /* Personal Details - 1 column on phone */
-  .details div {
-    grid-template-columns: 1fr !important;
-    gap: 2px !important;
-  }
+    .logo img {
+        width: 45px;
+    }
 
-  /* Cake / Zobo / Bouquet - 1 column on phone */
-  .single,
-  .double,
-  .two,
-  .five,
-  .one,
-  .zobo {
-    grid-template-columns: 1fr !important;
-  }
+    .logo span {
+        font-size: 1rem;
+        top: -12px;
+    }
 
-  .single p,
-  .double p,
-  .bouq p {
-    font-size: 18px !important;
-  }
+    .details div {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
 
-  .zobo {
-    margin-bottom: 5% !important;
-  }
+    .details label,
+    .items-list label,
+    .acco label {
+        font-size: 14px;
+    }
 
-  .box input {
-    width: 100% !important;
-  }
+    .single,
+    .double,
+    .two,
+    .five,
+    .one {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  .acco {
-    padding: 12px !important;
-  }
+    .single p,
+    .double p,
+    .bouq p {
+        font-size: 20px;
+    }
 
-  .acco p {
-    line-height: 1.6 !important;
-  }
+    .zobo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .zobo-item label {
+        font-size: 15px;
+    }
+
+    .acco {
+        padding: 15px;
+    }
+
+    .acco p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .box input {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 100%;
+        margin: 15px auto;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .modal-content img {
+        width: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .modal-content span {
+        font-size: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 38px;
+    }
+
+    .logo span {
+        font-size: 15px;
+        top: -10px;
+    }
+
+    /* Personal details */
+
+    .details h3,
+    .items-list h4 {
+        font-size: 17px;
+    }
+
+    .details p {
+        font-size: 11px;
+    }
+
+    .details div {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .details label {
+        font-size: 12px;
+    }
+
+    .details input {
+        width: 100%;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+    /* Product sections */
+
+    .single,
+    .double,
+    .two,
+    .five,
+    .one {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .single p,
+    .double p,
+    .bouq p {
+        font-size: 18px;
+    }
+
+    .items-list label,
+    .two label,
+    .five label,
+    .one label {
+        font-size: 11px;
+        padding: 8px 5px;
+        gap: 5px;
+    }
+
+    .items-list input[type="checkbox"],
+    .zobo input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+    }
+
+    /* Zobo section */
+
+    .zobo {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+
+    .zobo-item {
+        padding: 7px;
+    }
+
+    .zobo-item label {
+        font-size: 13px;
+    }
+
+    .box {
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .box span {
+        font-size: 10px;
+    }
+
+    .box input {
+        width: 100%;
+        min-width: 0;
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    /* Account details */
+
+    .acco {
+        margin-top: 15px;
+        padding: 12px;
+    }
+
+    .acco h4 {
+        font-size: 15px;
+    }
+
+    .acco p {
+        padding: 9px;
+        font-size: 11px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .acco label {
+        font-size: 12px;
+    }
+
+    .acco input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    /* Submit button */
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+/* SMALL PHONES */
+@media screen and (max-width: 350px) {
+
+    .modal-content {
+        width: 98%;
+        padding: 9px;
+    }
+
+    .details div {
+        grid-template-columns: 1fr;
+    }
+
+    .details label {
+        font-size: 13px;
+    }
+
+    .items-list label,
+    .two label,
+    .five label,
+    .one label {
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+
+    .zobo-item label {
+        font-size: 12px;
+    }
+
+    .single p,
+    .double p,
+    .bouq p {
+        font-size: 16px;
+    }
+
+    .acco {
+        padding: 9px;
+    }
 }

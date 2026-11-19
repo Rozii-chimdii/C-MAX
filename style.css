@@ -385,7 +385,12 @@
         font-weight: 600;
         cursor: pointer;
     }
-    
+
+.style-form button:hover {
+    background: #B18A45;
+    border-color: #B18A45;
+    transform: translateY(-2px);
+}
     footer {
         background-color: #4a2c1e;
         color: #f5e6d3;

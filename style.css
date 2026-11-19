@@ -818,7 +818,7 @@
         }
         .treat-showcase {
             width: 100%;
-            min-height: 145px;
+            min-height: auto;
             padding: 25px 12px;
             border-radius: 18px;
         }
@@ -867,7 +867,7 @@
             height:auto;
             min-height: 0;
             aspect-ratio:auto;
-            padding: 6px;
+            padding: 0;
             overflow:hidden;
         }
         /* VIDEO SIZE */

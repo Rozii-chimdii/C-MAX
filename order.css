@@ -273,3 +273,60 @@
     border-color: #B18A45;
     transform: translateY(-2px);
 }
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    padding: 14px 12px !important;
+  }
+
+  .modal-content img {
+    margin-left: 0 !important;
+    display: block;
+    margin: 0 auto !important;
+  }
+
+  .logo span {
+    top: 0 !important;
+  }
+
+  /* Personal Details - 1 column on phone */
+  .details div {
+    grid-template-columns: 1fr !important;
+    gap: 2px !important;
+  }
+
+  /* Cake / Zobo / Bouquet - 1 column on phone */
+  .single,
+  .double,
+  .two,
+  .five,
+  .one,
+  .zobo {
+    grid-template-columns: 1fr !important;
+  }
+
+  .single p,
+  .double p,
+  .bouq p {
+    font-size: 18px !important;
+  }
+
+  .zobo {
+    margin-bottom: 5% !important;
+  }
+
+  .box input {
+    width: 100% !important;
+  }
+
+  .acco {
+    padding: 12px !important;
+  }
+
+  .acco p {
+    line-height: 1.6 !important;
+  }
+}

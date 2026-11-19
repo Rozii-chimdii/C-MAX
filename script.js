@@ -101,6 +101,7 @@ document.getElementById('decorForm').addEventListener('submit', async function(e
 const SUPABASE_URL = "https://...";
 const SUPABASE_KEY = "sb_publishable_...";
 const MY_WHATSAPP = "234...";
+  const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   const name = document.getElementById('decorName').value;
   const phone = document.getElementById('decorPhone').value;
   const message = document.getElementById('decorMessage').value;

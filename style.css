@@ -900,7 +900,7 @@
             height: 85px;
         }
         .treat-showcase-card--video {
-            min-height: 140px;
+            min-height: 0;
         }
         .treat-showcase-card--video video {
             height: 125px;

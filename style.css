@@ -1025,7 +1025,32 @@ img, video {
   .single, .double, .two, .five, .one, .zobo {
     grid-template-columns: 1fr;
   }
-  
+  .acco {
+        margin-top: 15px;
+        padding: 15px 12px;
+    }
+
+    .acco h4 {
+        font-size: 15px;
+    }
+
+    .acco p {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .acco label {
+        font-size: 12px;
+    }
+
+    .acco input[type="file"] {
+        padding: 8px;
+        font-size: 11px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
   /* 8. FOOTER */
   footer {
     flex-direction: column;

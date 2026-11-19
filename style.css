@@ -592,7 +592,7 @@
         border: 1px solid #FDBA74
     }
     
-    .acco {
+    .account {
         margin-top: 20px;
         padding: 20px;
         background: #FAF5F0;
@@ -601,13 +601,13 @@
         border-radius: 12px;
     }
     
-    .acco h4 {
+    .account h4 {
         font-size: 17px;
         color: #65444D;
         margin-bottom: 10px;
     }
     
-    .acco p {
+    .account p {
         background: #FFFFFF;
         padding: 12px;
         border-radius: 8px;
@@ -617,19 +617,19 @@
         margin-bottom: 15px;
     }
     
-    .acco b {
+    .account b {
         color: #A47B37;
     }
     /* Receipt upload */
     
-    .acco label {
+    .account label {
         display: block;
         font-size: 13px;
         font-weight: 600;
         margin-bottom: 9px;
     }
     
-    .acco input[type="file"] {
+    .account input[type="file"] {
         width: 100%;
         padding: 11px;
         border: 1px dashed #C5A15B;
@@ -1082,26 +1082,26 @@ img, video {
 
 @media screen and (max-width: 768px) {
 
-    .acco {
+    .account {
         margin-top: 15px;
         padding: 15px 12px;
     }
 
-    .acco h4 {
+    .account h4 {
         font-size: 15px;
     }
 
-    .acco p {
+    .account p {
         padding: 10px;
         font-size: 12px;
         line-height: 1.8;
     }
 
-    .acco label {
+    .account label {
         font-size: 12px;
     }
 
-    .acco input[type="file"] {
+    .account input[type="file"] {
         padding: 8px;
         font-size: 11px;
         max-width: 100%;

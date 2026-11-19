@@ -98,7 +98,9 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
 
 document.getElementById('decorForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-
+const SUPABASE_URL = "https://...";
+const SUPABASE_KEY = "sb_publishable_...";
+const MY_WHATSAPP = "234...";
   const name = document.getElementById('decorName').value;
   const phone = document.getElementById('decorPhone').value;
   const message = document.getElementById('decorMessage').value;

@@ -904,217 +904,184 @@ img, video {
   max-width: 100%;
 }
 
-/* TABLET RESPONSIVENESS */
-@media screen and (max-width: 768px) {
+/* ========== MOBILE ========== */
+@media (max-width: 600px) {
 
-    .navbar {
-        padding: 10px 15px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  /* 1. NAVBAR - logo to left edge, links up */
+  .navbar {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 8px 8px 4px 5px !important;
+    gap: 0 !important;
+  }
 
-    .logo img {
-        width: 42px;
-    }
-
-    .logo span {
-        font-size: 1rem;
-        top: -12px;
-    }
-
-    .nav-links {
-        gap: 5px;
-        align-items: center;
-    }
-
-    a {
-        margin-left: 10px;
-        padding: 5px;
-        font-size: 13px;
-    }
-
-    .hero {
-        padding: 45px 4%;
-        gap: 20px;
-    }
-
-    .hero-content {
-        gap: 20px;
-    }
-
-    .offer {
-        width: 55%;
-    }
-
-    .offer h1 {
-        font-size: 35px;
-    }
-
-    .offer p {
-        font-size: 15px;
-    }
-
-    .hero-content > div img {
-        width: 280px;
-        height: 220px;
-        margin-right: 0;
-    }
-
-    .btn1 {
-        font-size: 15px;
-        padding: 9px 20px;
-    }
-}
-
-/* MOBILE RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-
-    /* NAVBAR */
-
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 12px;
-    }
-
-    .logo {
-        
+  .logo {
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    text-align: left !important;
-    }
+  }
 
-    .logo img {
-       
+  .logo img {
+    width: 42px !important;
     margin: 0 !important;
-    margin-left: 0 !important;
-    width: 45px !important;
-    }
+  }
 
-    .logo span {
-        
+  .logo span {
     top: 0 !important;
-    left: 0 !important;
-    margin-left: 5px !important;
-    text-align: left !important;
-    font-size: 1.1rem !important;
-    }
+    margin-left: 4px !important;
+    font-size: 1.05rem !important;
+  }
 
-    .nav-links {
-       display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-        width: 100%;
-        display: flex !important;
-    }
+  .nav-links {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+    margin-top: -4px !important; /* pulls navbar UP */
+  }
 
-    a {
-    margin-left: 0;
-    padding: 6px 8px;
-    font-size:12px;
-    }
+  .nav-links a, a {
+    margin-left: 0 !important;
+    padding: 6px 8px 6px 0 !important;
+    font-size: 14px !important;
+  }
 
-    .bnt {
-    font-size:12px;
-    padding: 7px 12px;
-    }
+  .bnt {
+    margin-left: 0 !important;
+    margin-top: 4px !important;
+    padding: 8px 14px !important;
+  }
 
-    /* HERO SECTION */
+  /* 2. HERO */
+  .hero {
+    padding: 25px 12px !important;
+    gap: 15px !important;
+  }
 
-    .hero {
-        padding: 35px 15px;
-        gap: 20px;
-        background-position: center;
-    }
+  .hero-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 25px;
-    }
+  .offer {
+    width: 100% !important;
+  }
 
-    .offer {
-        width: 100%;
-    }
+  .offer h1 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
 
-    .offer h1 {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 12px;
-    }
+  .offer p {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
 
-    .offer p {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 18px;
-    }
+  .hero-content > div img {
+    width: 100% !important;
+    height: 200px !important;
+    margin-right: 0 !important;
+  }
 
-    .btn1 {
-        font-size: 14px;
-        padding: 10px 22px;
-    }
+  /* 3. OUR TREATS / CARDS */
+  .our-treats h2 {
+    font-size: 26px !important;
+  }
 
-    .hero-content > div img {
-        width: 100%;
-        max-width: 350px;
-        height: 220px;
-        margin-right: 0;
-    }
+  .our-treats p {
+    font-size: 15px !important;
+    padding: 0 10px !important;
+  }
+
+  .cards {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .cards > div {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+
+  /* 4. DECOR */
+  .decor {
+    padding: 12px !important;
+  }
+
+  .decor h4 {
+    font-size: 26px !important;
+  }
+
+  .decor p {
+    font-size: 15px !important;
+  }
+
+  .treats {
+    flex-direction: column !important;
+  }
+
+  .big {
+    width: 100% !important;
+  }
+
+  .big img {
+    height: 220px !important;
+  }
+
+  .grid {
+    width: 100% !important;
+    grid-template-rows: repeat(3, 100px) !important;
+  }
+
+  .down {
+    grid-template-columns: 1fr !important;
+    padding: 14px !important;
+  }
+
+  .center {
+    padding-top: 10px !important;
+  }
+
+  .style-form {
+    max-width: 100% !important;
+    padding: 16px 12px !important;
+  }
+
+  /* 5. FOOTER */
+  footer {
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+    padding: 14px 10px !important;
+  }
 }
 
-/* EXTRA SMALL PHONES */
-@media screen and (max-width: 350px) {
-
-    .navbar {
-        padding: 8px;
-    }
-
-    .nav-links {
-        gap: 3px;
-    }
-
-    a {
-        font-size: 10px;
-        padding: 5px;
-    }
-
-    .logo img {
-        width: 35px;
-    }
-
-    .logo span {
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 25px 12px;
-    }
-
-    .offer h1 {
-        font-size: 25px;
-    }
-
-    .offer p {
-        font-size: 13px;
-    }
-
-    .hero-content > div img {
-        height: 190px;
-    }
-
-    .btn1 {
-        font-size: 13px;
-        padding: 9px 18px;
-    }
+/* ========== TABLET ========== */
+@media (max-width: 900px) and (min-width: 601px) {
+  .navbar {
+    padding: 10px 12px !important;
+  }
+  a {
+    margin-left: 15px !important;
+  }
+  .hero-content {
+    flex-direction: column !important;
+  }
+  .offer {
+    width: 100% !important;
+  }
+  .hero-content > div img {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .cards {
+    justify-content: center !important;
+  }
+  .down {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
   /* 3. TREATS / CARDS - 2 per row */
   .our-treats h2, .decor h4 {

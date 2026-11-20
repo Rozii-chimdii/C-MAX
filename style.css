@@ -1252,13 +1252,13 @@ footer {
 
 .footer-brand span {
   font-size: 1.2rem !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   color: #fff !important;
   white-space: normal !important;
 }
 
 .footer-brand span b {
-  color: #1ed98a !important;
+  color: #fff !important;
 }
 
 .footer-desc,
@@ -1267,8 +1267,8 @@ footer {
   padding: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
   word-break: break-word !important;
   white-space: normal !important;
   color: #fff !important;

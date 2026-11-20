@@ -52,28 +52,30 @@
                 <textarea id="msg" placeholder="E.g: Write-up/flavour/colour..."></textarea>
             </div>
 
+       <div class="zobo">
+  <div class="zobo-item" id="zobo35">
+    <input type="checkbox" value="600" id="check35" data-price="600" onchange="toggleQty('zobo35', this)">
+    <label for="check35">Zobo 35cl - ₦600</label>
+    <div class="box">
+      <span>Qty:</span>
+      <input type="number" class="qty-input" placeholder="No. of bottles"  oninput="updateTotal()">
+    </div>
+  </div>
+</div>
+
+
             <div class="zobo">
-                <div class="zobo-item" id="zobo35">
-                    <input type="checkbox" value="600" id="check35" onchange="toggleQty('zobo35', this)">
-                    <label for="check35">Zobo 35cl - ₦600</label>
-                    <div class="box">
-                        <span>Qty:</span>
-                        <input type="number" placeholder="No. of bottles">
-                    </div>
+  <div class="zobo-item" id="zobo50">
+    <input type="checkbox" value="1200" id="check35" data-price="1200" onchange="toggleQty('zobo50', this)">
+    <label for="check50">Zobo 50cl - ₦1,200</label>
+    <div class="box">
+      <span>Qty:</span>
+      <input type="number" class="qty-input" placeholder="No. of bottles" oninput="updateTotal()">
+    </div>
+  </div>
+</div>
 
-                </div>
-
-                <div class="zobo-item" id="zobo50">
-                    <input type="checkbox" value="1200" id="check50" onchange="toggleQty( 'zobo50', this)">
-                    <label for="check50">Zobo 50cl - ₦1200</label>
-                    <div class="box">
-                        <span>Qty:</span>
-                        <input type="number" placeholder="No. of bottles">
-                    </div>
-
-                </div>
-            </div>
-
+<p>Total: ₦<span id="totalAmount">0</span></p>
 
             <div class="bouq">
                 <p>Money Bouquet

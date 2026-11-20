@@ -130,18 +130,7 @@ body.dark .mobile-menu a {
   color: #ffeef2 !important;
 }
 
-/* Hero / Sections also turn brown */
-body.dark .hero,
-body.dark section {
-  background: #4a2c1a !important;
-  color: #fff !important;
-}
 
-body.dark h1,
-body.dark h2,
-body.dark p {
-  color: #fff !important;
-}
 /* Dropdown */
 .mobile-menu {
   display: none;

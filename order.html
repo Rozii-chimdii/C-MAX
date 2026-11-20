@@ -66,7 +66,7 @@
 
             <div class="zobo">
   <div class="zobo-item" id="zobo50">
-    <input type="checkbox" value="1200" id="check35" data-price="1200" onchange="toggleQty('zobo50', this)">
+    <input type="checkbox" value="1200" id="check50" data-price="1200" onchange="toggleQty('zobo50', this)">
     <label for="check50">Zobo 50cl - ₦1,200</label>
     <div class="box">
       <span>Qty:</span>
@@ -74,8 +74,6 @@
     </div>
   </div>
 </div>
-
-<p>Total: ₦<span id="totalAmount">0</span></p>
 
             <div class="bouq">
                 <p>Money Bouquet
@@ -138,19 +136,44 @@
   const checks = document.querySelectorAll('#orderForm input[type="checkbox"]');
   const totalEl = document.getElementById('total-amount');
 
+  function toggleQty(id, checkbox) {
+    const item = document.getElementById(id);
+    if (!item) return;
+    const qtyInput = item.querySelector('.qty-input');
+    if (qtyInput) {
+      if (checkbox.checked && !qtyInput.value) qtyInput.value = 1;
+      if (!checkbox.checked) qtyInput.value = "";
+    }
+    updateTotal();
+  }
+
   function updateTotal() {
     let total = 0;
     checks.forEach(function(box) {
       if (box.checked) {
-        let price = box.value.replace(/[^0-9]/g, "");
-        total += Number(price);
+        // Remove comma: "25,000" -> 25000
+        let price = Number(box.value.replace(/[^0-9]/g, "")) || 0;
+
+        // ONLY Zobo has Qty, others = 1
+        let qty = 1;
+        const zoboItem = box.closest('.zobo-item');
+        if (zoboItem) {
+          const qtyInput = zoboItem.querySelector('.qty-input');
+          qty = qtyInput ? parseInt(qtyInput.value) || 0 : 0;
+        }
+        total += price * qty;
       }
     });
-    totalEl.textContent = '₦' + total.toLocaleString();
+    if (totalEl) totalEl.textContent = '₦' + total.toLocaleString();
   }
 
   checks.forEach(function(box) {
     box.addEventListener('change', updateTotal);
+  });
+
+  // Update when user types Qty number
+  document.querySelectorAll('.qty-input').forEach(function(input) {
+    input.addEventListener('input', updateTotal);
   });
 </script>
      <script src="script.js"></script>

@@ -1007,23 +1007,23 @@ img, video {
     }
 
     .nav-links {
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-    width: 100% !important;
-    margin-top: -5px !important;
-    padding-top: 0 !important;
-    justify-content: flex-start !important;
+       display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+        display: flex !important;
     }
 
     a {
-    margin: 0 !important;
-    padding: 4px 0 !important;
+    margin-left: 0;
+    padding: 6px 8px;
+    font-size:12px;
     }
 
     .bnt {
-    margin-top: 2px !important;
-    margin-left: 0 !important;
-    padding: 8px 14px !important;
+    font-size:12px;
+    padding: 7px 12px;
     }
 
     /* HERO SECTION */

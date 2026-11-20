@@ -144,3 +144,33 @@ if (!decorForm) return;f
     btn.disabled = false;
   });
 });
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const themeBtn = document.getElementById('themeBtn');
+
+// 1. Load saved theme - if user chose black before, keep black
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  themeBtn.textContent = '🌙';
+}
+
+// 2. Hamburger - ☰ to ✕
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuBtn.textContent = isOpen ? '✕' : '☰';
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.textContent = '☰';
+  });
+});
+
+// 3. Sun / Moon Toggle - White <-> Black
+themeBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark');
+  themeBtn.textContent = isDark ? '🌙' : '☀️';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});

@@ -9,87 +9,89 @@
         margin: 0;
     }
     
-
-  /* === C-MAX NAVBAR - LIGHT PINK === */
+/* === C-MAX NAVBAR - ONE LINE ON MOBILE === */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 14px;
-  background: #ffeef2; /* light pink to match site */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 12px !important;
+  background: #ffeef2; /* light pink */
   border-bottom: 1px solid #ffd6e0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* THIS fixes click problem - nothing blocks it */
-  pointer-events: auto;
+  gap: 8px;
 }
 
+/* LOGO - LEFT */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
 }
 
 .logo img {
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
   background: #fff;
   border: 2px solid #fff;
-  flex-shrink: 0;
 }
 
 .logo span {
-  font-size: 1.35rem !important;
+  font-size: 1.15rem !important; /* smaller so it fits */
   font-weight: 800 !important;
   color: #3b2314 !important;
   margin: 0 !important;
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 .logo span b {
-  color: #1ed98a; /* green like your screenshot */
+  color: #1ed98a !important;
 }
 
+/* RIGHT SIDE - Order + Hamburger + Sun */
 .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
 }
 
-/* Order Now - always clickable */
 .order-btn {
-  background: #1ed98a;
+  background: #1ed98a !important;
   color: #000 !important;
   text-decoration: none !important;
-  padding: 9px 15px !important;
-  border-radius: 999px;
-  font-size: 14px !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
   font-weight: 800 !important;
   margin: 0 !important;
-  white-space: nowrap;
-  display: inline-block;
+  white-space: nowrap !important;
+  display: inline-block !important;
   position: relative;
   z-index: 10;
-  pointer-events: auto;
-  cursor: pointer;
 }
 
 .icon-btn {
-  background: none;
-  border: none;
-  color: #3b2314;
-  font-size: 24px;
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px;
+  background: none !important;
+  border: none !important;
+  color: #3b2314 !important;
+  font-size: 22px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  padding: 2px !important;
 }
 
-/* Dropdown menu */
+/* Dropdown */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -97,32 +99,23 @@
   padding: 12px 20px 24px;
   gap: 22px;
   position: sticky;
-  top: 66px;
+  top: 58px;
   z-index: 999;
-  border-bottom: 1px solid #ffd6e0;
 }
-
-.mobile-menu.open {
-  display: flex;
-}
-
+.mobile-menu.open { display: flex; }
 .mobile-menu a {
   color: #5a3a2e !important;
   text-decoration: none !important;
   font-size: 18px !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-/* === DARK MODE - when user clicks sun/moon === */
-body.dark .navbar {
-  background: #2b1a1a;
-  border-bottom: 1px solid #444;
+/* Extra small phones - make it even tighter */
+@media (max-width: 360px) {
+  .logo span { font-size: 1rem !important; }
+  .logo img { width: 32px !important; height: 32px !important; min-width: 32px !important; }
+  .order-btn { padding: 7px 10px !important; font-size: 12px !important; }
+  .icon-btn { font-size: 20px !important; }
 }
-body.dark .logo span { color: #fff !important; }
-body.dark .icon-btn { color: #fff; }
-body.dark .mobile-menu { background: #2b1a1a; border-color: #444; }
-body.dark .mobile-menu a { color: #e5e5e5 !important; }
 
 
 

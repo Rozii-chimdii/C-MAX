@@ -54,7 +54,7 @@ body.dark .logo img {
   font-size: 1.15rem !important; /* smaller so it fits */
   font-weight: 800 !important;
   color: #3b2314 !important;
-  margin: 0 !important;
+  margin-top: 6px !important;
   white-space: nowrap !important;
 }
 

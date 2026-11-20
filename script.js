@@ -149,18 +149,20 @@ const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const themeBtn = document.getElementById('themeBtn');
 
-// 1. Load saved theme - if user chose black before, keep black
+// Load saved theme
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark');
   themeBtn.textContent = '🌙';
 }
 
-// 2. Hamburger - ☰ to ✕
-menuBtn.addEventListener('click', () => {
+// Hamburger ONLY - do NOT add click handler to Order Now
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // stops menu from blocking Order button
   const isOpen = mobileMenu.classList.toggle('open');
   menuBtn.textContent = isOpen ? '✕' : '☰';
 });
 
+// Close menu when link clicked
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
@@ -168,7 +170,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   });
 });
 
-// 3. Sun / Moon Toggle - White <-> Black
+// Theme toggle
 themeBtn.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark');
   themeBtn.textContent = isDark ? '🌙' : '☀️';

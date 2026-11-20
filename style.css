@@ -80,6 +80,28 @@ body.dark {
   line-height: 1;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-btn {
+  background: #e78a9e;
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 8px 14px !important;
+  border-radius: 20px;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+body.dark .order-btn {
+  background: #1ed98a;
+  color: #000 !important;
+}
 .mobile-menu {
   display: none;
   flex-direction: column;

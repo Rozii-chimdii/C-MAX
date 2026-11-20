@@ -17,31 +17,19 @@
   </div>
 
   <div class="nav-right">
-    <!-- Order Now OUTSIDE - always visible -->
-    <a href="#order.html" class="order-btn">Order Now</a>
-    <button id="menuBtn" class="icon-btn">☰</button>
-    <button id="themeBtn" class="icon-btn">☀️</button>
+    <!-- This MUST be a normal <a> link, not a <button> -->
+    <a href="order.html" class="order-btn">Order Now</a>
+    <button id="menuBtn" class="icon-btn" type="button">☰</button>
+    <button id="themeBtn" class="icon-btn" type="button">☀️</button>
   </div>
 </header>
 
-<!-- Menu WITHOUT Order Now -->
 <nav id="mobileMenu" class="mobile-menu">
-  <a href="#home">Home</a>
-  <a href="#treats">Our Treats</a>
-  <a href="#decor">Room Decor</a>
-  <a href="#contact">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="index.html#treats">Our Treats</a>
+  <a href="index.html#decor">Room Decor</a>
+  <a href="index.html#contact">Contact</a>
 </nav>
-
-<!-- Dropdown menu - hidden until you click ☰ -->
-<nav id="mobileMenu" class="mobile-menu">
-  <a href="#home">Home</a>
-  <a href="#treats">Our Treats</a>
-  <a href="#decor">Room Decor</a>
-  <a href="#contact">Contact</a>
-  <a href="#order" class="order-link">SHOP</a>
-</nav>
-
-
 
     <section id="hero" class="hero">
         <div class="hero-content">

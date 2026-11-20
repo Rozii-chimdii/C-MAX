@@ -103,14 +103,11 @@ body.dark .logo img {
 .icon-btn { color: #3b2314 !important; }
 .mobile-menu { background: #fff5f7 !important; }
 
-/* === DARK MODE - BROWN like Footer === */
-body.dark {
-  background: #4a2c1a !important; /* same brown as footer */
-  color: #fff !important;
-}
 
+
+/* === DARK MODE - ONLY NAVBAR CHANGES === */
 body.dark .navbar {
-  background: #4a2c1a !important; /* same brown */
+  background: #4a2c1a !important; /* same brown as footer */
   border-bottom: 1px solid #5a3a26 !important;
 }
 
@@ -129,7 +126,6 @@ body.dark .mobile-menu {
 body.dark .mobile-menu a {
   color: #ffeef2 !important;
 }
-
 
 /* Dropdown */
 .mobile-menu {

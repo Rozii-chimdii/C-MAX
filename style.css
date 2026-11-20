@@ -130,11 +130,6 @@ body.dark .order-btn {
   color: var(--nav-text) !important;
 }
 
-.mobile-menu .order-link {
-  color: #1ed98a !important;
-  font-weight: 700 !important;
-}
-    
     .bnt {
         border: 1px solid #d4a854;
         border-collapse: collapse;

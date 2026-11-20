@@ -54,7 +54,7 @@
 }
 
 .logo span b {
-  color: #1ed98a !important;
+  color:#4b2e26 !important;
 }
 
 /* RIGHT SIDE - Order + Hamburger + Sun */
@@ -67,8 +67,8 @@
 }
 
 .order-btn {
-  background: #1ed98a !important;
-  color: #000 !important;
+  background: #e78a9e !important;
+  color:#1c1c1c !important;
   text-decoration: none !important;
   padding: 8px 12px !important;
   border-radius: 999px !important;
@@ -81,6 +81,10 @@
   z-index: 10;
 }
 
+.order-btn:hover {
+        background-color: #4a2c1e;
+        color: white;
+    }
 .icon-btn {
   background: none !important;
   border: none !important;

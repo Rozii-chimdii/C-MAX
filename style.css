@@ -55,7 +55,7 @@ body.dark .logo img {
   font-weight: 800 !important;
   color: #3b2314 !important;
   white-space: nowrap !important;
-   top:7px;
+  top:7px !important;
 }
 
 .logo span b {

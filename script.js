@@ -130,15 +130,17 @@ if (!decorForm) return;f
 
       const result = await res.text();
       console.log("Supabase answered:", res.status, result);
+      
+ if (name === "" || phone === "" || message === "") {
+    alert("Please fill this form before sending 🙏");
+    return; // <-- THIS LINE STOPS IT. It will NOT go to Supabase
+  }
 
-      if (!res.ok) throw new Error("Supabase says: " + result);
+  // Only if everything is filled, it will reach here
+  alert("Booking received! We will call you soon ❤️");
 
-      alert("Booking received! We will call you.");
-      decorForm.reset();
-    } catch (err) {
-      console.log("FAILED:", err);
-      alert("Error: " + err.message);
-    }
+  // Reset safely
+  e.target.reset();
 
     btn.textContent = "Send Message";
     btn.disabled = false;

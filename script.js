@@ -98,23 +98,27 @@ const orderData = { full_name, phone, address, delivery_date, items, total_price
 
 document.addEventListener("DOMContentLoaded", () => {
   const decorForm = document.getElementById("decorForm");
-  if (!decorForm) {
-    const decorForm = document.getElementById('decorForm');
-if (!decorForm) return;f
-  }
+  if (!decorForm) return;
 
   decorForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const btn = decorForm.querySelector("button");
+    const name = document.getElementById("decorName").value.trim();
+    const phone = document.getElementById("decorPhone").value.trim();
+    const message = document.getElementById("decorMessage").value.trim();
+
+    // 1. CHECK FIRST - BEFORE SENDING TO SUPABASE
+    if (name === "" || phone === "" || message === "") {
+      alert("Please fill this form before sending 🙏");
+      return; // STOPS HERE. No Supabase, no "Booking received"
+    }
+
+    // 2. Only if filled, send
     btn.textContent = "Sending...";
     btn.disabled = true;
 
-    const name = document.getElementById("decorName").value;
-    const phone = document.getElementById("decorPhone").value;
-    const message = document.getElementById("decorMessage").value;
-
     console.log("Trying to send:", name, phone, message);
-    console.log("URL:", SUPABASE_URL);
 
     try {
       const res = await fetch(SUPABASE_URL + "/rest/v1/room_decor_bookings", {
@@ -130,23 +134,26 @@ if (!decorForm) return;f
 
       const result = await res.text();
       console.log("Supabase answered:", res.status, result);
-      
- if (name === "" || phone === "" || message === "") {
-    alert("Please fill this form before sending 🙏");
-    return; // <-- THIS LINE STOPS IT. It will NOT go to Supabase
-  }
 
-  // Only if everything is filled, it will reach here
-  alert("Booking received! We will call you soon ❤️");
+      if (!res.ok) {
+        alert("Something went wrong, please try again.");
+        return;
+      }
 
-  // Reset safely
-  e.target.reset();
+      // 3. Success - ONLY after Supabase says OK
+      alert("Booking received! We will call you soon ❤️");
+      e.target.reset();
 
-    btn.textContent = "Send Message";
-    btn.disabled = false;
+    } catch (err) {
+      console.log(err);
+      alert("Network error, please try again or WhatsApp us.");
+    } finally {
+      // 4. Always bring button back
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    }
   });
 });
-
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const themeBtn = document.getElementById('themeBtn');

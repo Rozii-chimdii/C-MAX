@@ -904,255 +904,7 @@ img, video {
   max-width: 100%;
 }
 
-/* ========== MOBILE ========== */
-@media (max-width: 600px) {
 
-  /* 1. NAVBAR - logo to left edge, links up */
-  .navbar {
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    padding: 8px 8px 4px 5px !important;
-    gap: 0 !important;
-  }
-
-  .logo {
-    display: flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .logo img {
-    width: 42px !important;
-    margin: 0 !important;
-  }
-
-  .logo span {
-    top: 0 !important;
-    margin-left: 4px !important;
-    font-size: 1.05rem !important;
-  }
-
-  .nav-links {
-    width: 100% !important;
-    flex-wrap: wrap !important;
-    gap: 0 !important;
-    margin-top: -4px !important; /* pulls navbar UP */
-  }
-
-  .nav-links a, a {
-    margin-left: 0 !important;
-    padding: 6px 8px 6px 0 !important;
-    font-size: 14px !important;
-  }
-
-  .bnt {
-    margin-left: 0 !important;
-    margin-top: 4px !important;
-    padding: 8px 14px !important;
-  }
-
-  /* 2. HERO */
-  .hero {
-    padding: 25px 12px !important;
-    gap: 15px !important;
-  }
-
-  .hero-content {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .offer {
-    width: 100% !important;
-  }
-
-  .offer h1 {
-    font-size: 30px !important;
-    line-height: 1.2 !important;
-  }
-
-  .offer p {
-    font-size: 15px !important;
-    max-width: 100% !important;
-  }
-
-  .hero-content > div img {
-    width: 100% !important;
-    height: 200px !important;
-    margin-right: 0 !important;
-  }
-
-  /* 3. OUR TREATS / CARDS */
-  .our-treats h2 {
-    font-size: 26px !important;
-  }
-
-  .our-treats p {
-    font-size: 15px !important;
-    padding: 0 10px !important;
-  }
-
-  .cards {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-
-  .cards > div {
-    width: 100% !important;
-    max-width: 320px !important;
-  }
-
-  /* 4. DECOR */
-  .decor {
-    padding: 12px !important;
-  }
-
-  .decor h4 {
-    font-size: 26px !important;
-  }
-
-  .decor p {
-    font-size: 15px !important;
-  }
-
-  .treats {
-    flex-direction: column !important;
-  }
-
-  .big {
-    width: 100% !important;
-  }
-
-  .big img {
-    height: 220px !important;
-  }
-
-  .grid {
-    width: 100% !important;
-    grid-template-rows: repeat(3, 100px) !important;
-  }
-
-  .down {
-    grid-template-columns: 1fr !important;
-    padding: 14px !important;
-  }
-
-  .center {
-    padding-top: 10px !important;
-  }
-
-  .style-form {
-    max-width: 100% !important;
-    padding: 16px 12px !important;
-  }
-
-  /* 5. FOOTER */
-  footer {
-    flex-direction: column !important;
-    gap: 6px !important;
-    text-align: center !important;
-    padding: 14px 10px !important;
-  }
-}
-
-/* ========== TABLET ========== */
-@media (max-width: 900px) and (min-width: 601px) {
-  .navbar {
-    padding: 10px 12px !important;
-  }
-  a {
-    margin-left: 15px !important;
-  }
-  .hero-content {
-    flex-direction: column !important;
-  }
-  .offer {
-    width: 100% !important;
-  }
-  .hero-content > div img {
-    width: 100% !important;
-    margin-right: 0 !important;
-  }
-  .cards {
-    justify-content: center !important;
-  }
-  .down {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-  /* 3. TREATS / CARDS - 2 per row */
-  .our-treats h2, .decor h4 {
-    font-size: 28px;
-  }
-  .our-treats p, .decor p {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-  .cards {
-    justify-content: center;
-    gap: 12px;
-  }
-  .cards > div {
-    width: 46%;
-    padding: 8px;
-  }
-
-  /* 4. DECOR / TREATS BIG + GRID - stack */
-  .decor {
-    padding: 15px 10px;
-  }
-  .treats {
-    flex-direction: column;
-  }
-  .big, .grid {
-    width: 100%;
-  }
-  .big img {
-    height: 260px;
-  }
-  .grid {
-    grid-template-rows: repeat(3, 110px);
-  }
-
-  /* 5. DOWN SECTION - stack 3 cols to 1 */
-  .down {
-    grid-template-columns: 1fr;
-    padding: 15px 10px;
-    gap: 15px;
-  }
-  .center {
-    padding-top: 10px;
-  }
-  .style-form {
-    max-width: 100%;
-  }
-
-  /* 6. ORDER FORM / MODAL - full width, no left margin */
-  .modal-content {
-    margin-left: 0;
-    max-width: 100%;
-    padding: 15px 12px;
-  }
-  .modal-content img {
-    margin-left: 0;
-  }
-  .details div {
-    grid-template-columns: 1fr;
-  }
-  .single, .double, .two, .five, .one, .zobo {
-    grid-template-columns: 1fr;
-  }
-
-  /* 8. FOOTER */
-  footer {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-}
 
 /* Very small phones - Tecno / iPhone SE */
 @media (max-width: 400px) {
@@ -1228,4 +980,184 @@ img, video {
         box-sizing: border-box;
     }
 
+}
+/* ===== FIX FOR ALL PHONES - PASTE AT VERY BOTTOM ===== */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+img, video {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* 1. NAVBAR - stack it */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  a {
+    margin-left: 0 !important;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .logo span {
+    top: 0;
+    font-size: 1rem;
+  }
+
+  /* 2. HERO - stack text on top, image below */
+  .hero {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .offer {
+    width: 100%;
+  }
+  .offer h1 {
+    font-size: 32px;
+  }
+  .offer p {
+    font-size: 15px;
+  }
+  .hero-content > div img {
+    width: 100%;
+    height: 220px;
+    margin-right: 0;
+  }
+  .btn1, .btn2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* 3. TREATS / CARDS - 2 per row */
+  .our-treats h2, .decor h4 {
+    font-size: 28px;
+  }
+  .our-treats p, .decor p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  .cards {
+    justify-content: center;
+    gap: 12px;
+  }
+  .cards > div {
+    width: 46%;
+    padding: 8px;
+  }
+
+  /* 4. DECOR / TREATS BIG + GRID - stack */
+  .decor {
+    padding: 15px 10px;
+  }
+  .treats {
+    flex-direction: column;
+  }
+  .big, .grid {
+    width: 100%;
+  }
+  .big img {
+    height: 260px;
+  }
+  .grid {
+    grid-template-rows: repeat(3, 110px);
+  }
+
+  /* 5. DOWN SECTION - stack 3 cols to 1 */
+  .down {
+    grid-template-columns: 1fr;
+    padding: 15px 10px;
+    gap: 15px;
+  }
+  .center {
+    padding-top: 10px;
+  }
+  .style-form {
+    max-width: 100%;
+  }
+
+  /* 6. ORDER FORM / MODAL - full width, no left margin */
+  .modal-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 15px 12px;
+  }
+  .modal-content img {
+    margin-left: 0;
+  }
+  .details div {
+    grid-template-columns: 1fr;
+  }
+  .single, .double, .two, .five, .one, .zobo {
+    grid-template-columns: 1fr;
+  }
+  .acco {
+    padding: 15px 12px;
+  }
+
+  /* 7. TREAT SECTION - VIDEO IN MIDDLE */
+  .items-section {
+    padding: 25px 12px;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+  .items h1, .subtitle {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+  .items h1 {
+    font-size: 24px;
+  }
+  .items-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .photo-one { grid-column: 1; grid-row: 1; }
+  .photo-two { grid-column: 2; grid-row: 1; }
+  .video-card {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    min-height: 220px;
+  }
+  .photo-three { grid-column: 1; grid-row: 3; }
+  .photo-four { grid-column: 2; grid-row: 3; }
+  .items-card img {
+    height: 130px;
+  }
+
+  /* 8. FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* Very small phones - Tecno / iPhone SE */
+@media (max-width: 400px) {
+  .cards > div {
+    width: 100%;
+  }
+  .offer h1 {
+    font-size: 26px;
+  }
+  .items-gallery {
+    grid-template-columns: 1fr;
+  }
+  .photo-one, .photo-two, .video-card, .photo-three, .photo-four {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }

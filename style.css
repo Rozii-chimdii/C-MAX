@@ -445,16 +445,6 @@
     border-color: #B18A45;
     transform: translateY(-2px);
 }
-    footer {
-        background-color: #4a2c1e;
-        color: #f5e6d3;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 20px;
-        border-radius: 0 0 12px 12px;
-        font-size: 12px;
-    }
     
     .logo img {
         width: 50px;
@@ -1206,13 +1196,6 @@ img, video {
   .items-card img {
     height: 130px;
   }
-
-  /* 8. FOOTER */
-  footer {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
 }
 
 /* Very small phones - Tecno / iPhone SE */
@@ -1229,5 +1212,88 @@ img, video {
   .photo-one, .photo-two, .video-card, .photo-three, .photo-four {
     grid-column: 1;
     grid-row: auto;
+  }
+}
+
+
+/* ===== FOOTER - FIXED, NO OVERLAP ===== */
+footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  text-align: center !important;
+  padding: 22px 16px !important;
+  background: #4a2c1a !important; /* brown like in your screenshot */
+  color: #fff !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.footer-brand {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.footer-brand img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+
+.footer-brand span {
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  white-space: normal !important;
+}
+
+.footer-brand span b {
+  color: #1ed98a !important;
+}
+
+.footer-desc,
+.footer-copy {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  color: #fff !important;
+}
+
+.footer-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 8px 14px !important;
+  width: 100% !important;
+}
+
+.footer-links a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  white-space: nowrap !important;
+}
+
+/* Mobile - even tighter */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
   }
 }
